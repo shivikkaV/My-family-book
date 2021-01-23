@@ -1,0 +1,47 @@
+<html>
+    <head>
+ <title>
+     My Family Book
+ </title>
+ <link rel="stylesheet"href="style.css">
+    </head>
+    <body>
+        <h1>My Family Book</h1>
+        <br>
+        <br>
+        <img id="album" src="The family book.jpg">
+        <h2 id="text">My family book</h2>
+        <div>
+            <button type="button" function onclick="nextslide()">
+                Next page
+            </button>
+        </div>
+    </body>
+    <script>
+        var images=[
+            "me.png",
+            "mum.jpg",
+            "Dad.jpg",
+            "grandma.jpg",
+            "grandpa.png"
+        ];
+
+        var names=[
+            "Me aka Shivikka",
+            "My mum",
+            "My dad",
+            "My grandma",
+            "My grandpa"
+        ];
+        
+        var i=0;
+        function nextslide(){
+            if(i==9){
+                i=0
+            }
+            document.getElementById("album").src = images[i];
+            document.getElementById("text").innerHTML = names[i];
+        i++;   
+        }
+    </script>
+</html>
